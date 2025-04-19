@@ -19,7 +19,6 @@ const int offset = 50;
 const string font_name = "Arial.ttf";
 const string music_path = "Sounds/ttfaf.ogg";
 
-// block tiles using binary
 uint16_t tiles[num_blocks] = {
     0b010111000,  // T
     0b111111111,  // 3x3
@@ -34,13 +33,12 @@ array<sf::Color, num_blocks> colors = {
     sf::Color(255, 0, 0)
 };
 
-int grid[num_tiles_y][num_tiles_x] = {0};  // y then x
+int grid[num_tiles_y][num_tiles_x] = {0};  
 
 struct Pos {
     int x, y;
 };
 
-// GLOBAL font to use in draw_text
 sf::Font font;
 
 void draw_text(sf::RenderWindow &window, string value, sf::Vector2f position) {
